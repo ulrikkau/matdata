@@ -1,9 +1,5 @@
+#app.py
 import streamlit as st
-
-st.title("🎈Min mat")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
 import pandas as pd
 import sqlite3
 from datetime import datetime
