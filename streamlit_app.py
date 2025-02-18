@@ -26,6 +26,15 @@ max_date = df['date_time'].max().date()
 start_date = st.date_input("Start Date", min_date)
 end_date = st.date_input("End Date", max_date)
 
+def to_excel(df):
+    output = BytesIO()
+    with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
+        df.to_excel(writer, index=False, sheet_name='Sheet1')
+    processed_data = output.getvalue()
+    return processed_data
+
+# Then use it in your app
+excel_data = to_excel(filtered_df)
 
 # Function to create the database and table if they don't exist
 def init_db():
