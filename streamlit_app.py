@@ -53,9 +53,9 @@ def main():
     st.title("Food Logger")
 
     # Get existing food items
-    existing_food_items = get_food_items()
-
+    existing_food_items = get_food_items() 
     # Input fields
+    
     food_item = st.selectbox("Food Item", options=[""] + existing_food_items, index=0)
     if food_item == "":
         food_item = st.text_input("Enter a new food item")
