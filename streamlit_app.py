@@ -53,7 +53,9 @@ def main():
     # Display logged foods
     st.write("Your food log:")
     conn = sqlite3.connect(DB_FILE)
-    df = pd.read_sql_query("SELECT * FROM food_log", conn)
+    
+    df = pd.read_sql_query("SELECT * FROM food_log ORDER BY date_time DESC", conn)
+
     st.dataframe(df)
     conn.close()
 
