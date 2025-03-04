@@ -1,4 +1,4 @@
-import streamlit as st
+eimport streamlit as st
 import pandas as pd
 import sqlite3
 from datetime import datetime
@@ -62,7 +62,7 @@ def main():
 
     amount = st.number_input("Amount (g)", min_value=0.0, step=0.1)
     glukos= st.number_input("Glukos ", min_value=0.0, step=0.1)
-    matrel=st.button("Fasta","Före måltid", "Efter måltid", "Annat", "Kväll")
+    matrel=st.selectbox("Fasta","Före måltid", "Efter måltid", "Annat", "Kväll",index=0)
     # Date and time input
     date = st.date_input("Date")
     time = st.time_input("Time")
