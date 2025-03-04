@@ -63,7 +63,7 @@ def main():
     amount = st.number_input("Amount (g)", min_value=0.0, step=0.1)
     glukos= st.number_input("Glukos ", min_value=0.0, step=0.1)
     valj=["Fasta","Före måltid", "Efter måltid", "Annat"]
-    matrel=st.selectbox(options=valj,index=0)
+    matrel=st.selectbox("Tillfälle: ",options=valj,index=0)
     # Date and time input
     date = st.date_input("Date")
     time = st.time_input("Time")
