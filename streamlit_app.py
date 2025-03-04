@@ -61,7 +61,8 @@ def main():
         food_item = st.text_input("Enter a new food item")
 
     amount = st.number_input("Amount (g)", min_value=0.0, step=0.1)
-    
+    glukos= st.number_input("Glukos ", min_value=0.0, step=0.1)
+    matrel=st.radiobutton("Fasta","Före måltid", "Efter måltid", "Annat", "Kväll")
     # Date and time input
     date = st.date_input("Date")
     time = st.time_input("Time")
