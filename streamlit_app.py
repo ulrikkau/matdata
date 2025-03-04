@@ -76,8 +76,8 @@ def main():
     if st.button("Log Food"):
         conn = sqlite3.connect(DB_FILE)
         c = conn.cursor()
-        c.execute("INSERT INTO food_log (food_item, amount,glukos,matrel date_time) VALUES (?, ?, ?)",
-                  (food_item, amount,glukos, matrel, date_time.strftime("%Y-%m-%d %H:%M:%S")))
+        c.execute("INSERT INTO food_log (food_item, amount, glukos, matrel, date_time) VALUES (?, ?, ?, ?, ?)",
+                (food_item, amount, glukos, matrel, date_time.strftime("%Y-%m-%d %H:%M:%S")))
         conn.commit()
         conn.close()
         st.success("Food logged successfully!")
